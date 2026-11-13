@@ -25,13 +25,25 @@ builder.Services.AddScoped<IValidator<BeerUpdateDto>, BeerUpdateValidator>();
 builder.Services.AddScoped<IValidator<BrandInsertDto>, BrandInsertValidator>();
 builder.Services.AddScoped<IValidator<BrandUpdateDto>, BrandUpdateValidator>();
 
+// Validators Inventory
+builder.Services.AddScoped<IValidator<InventoryInsertDto>, InventoryInsertValidator>();
+builder.Services.AddScoped<IValidator<InventoryUpdateDto>, InventoryUpdateValidator>();
+
+// Validators Sale
+builder.Services.AddScoped<IValidator<SaleInsertDto>, SaleInsertValidator>();
+builder.Services.AddScoped<IValidator<SaleUpdateDto>, SaleUpdateValidator>();
+
 // Services
 builder.Services.AddKeyedScoped<ICommonServices<BeerDto, BeerInsertDto, BeerUpdateDto>, BeerService>("beerService");
 builder.Services.AddKeyedScoped<ICommonServices<BrandDto, BrandInsertDto, BrandUpdateDto>, BrandService>("brandService");
+builder.Services.AddKeyedScoped<ICommonServices<InventoryDto, InventoryInsertDto, InventoryUpdateDto>, InventoryService>("inventoryService");
+builder.Services.AddKeyedScoped<ICommonServices<SaleDto, SaleInsertDto, SaleUpdateDto>, SaleService>("saleService");
 
 // Repositories
 builder.Services.AddScoped<IRepository<Beer>, BeerRepository>();
 builder.Services.AddScoped<IRepository<Brand>, BrandRepository>();
+builder.Services.AddScoped<IRepository<Inventory>, InventoryRepository>();
+builder.Services.AddScoped<IRepository<Sale>, SaleRepository>();
 
 // Post service
 builder.Services.AddHttpClient<IPostService, PostServices>(c => c.BaseAddress = new Uri(builder.Configuration["BaseUrlPost"]));

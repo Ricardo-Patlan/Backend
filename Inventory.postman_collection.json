@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "Inventory API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5141" },
+    { "key": "id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Listar inventario",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/Inventory"
+      }
+    },
+    {
+      "name": "Obtener inventario por id",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/Inventory/{{id}}"
+      }
+    },
+    {
+      "name": "Crear inventario",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/Inventory",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantity\": 50,\n  \"batchNumber\": 1001,\n  \"beerId\": 1,\n  \"productionDate\": \"2026-11-01\",\n  \"purchasePrice\": 25.50,\n  \"storageSection\": \"A1\",\n  \"bestBeforeDate\": \"2027-05-01\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Actualizar inventario",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/Inventory/{{id}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantity\": 80,\n  \"batchNumber\": 1001,\n  \"beerId\": 1,\n  \"productionDate\": \"2026-11-01\",\n  \"purchasePrice\": 27.00,\n  \"storageSection\": \"B2\",\n  \"bestBeforeDate\": \"2027-06-01\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Eliminar inventario",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/Inventory/{{id}}"
+      }
+    }
+  ]
+}

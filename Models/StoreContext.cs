@@ -10,6 +10,9 @@ public class StoreContext : DbContext
 
     public DbSet<Beer> Beers { get; set; }
     public DbSet<Brand> Brands { get; set; }
+    public DbSet<Inventory> Inventories { get; set; }
+    public DbSet<Sale> Sales { get; set; }
+    public DbSet<Supplier> Suppliers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karina\\backend\\backend.csproj": {}
+    "C:\\Sistemas Propietarios\\Backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karina\\backend\\backend.csproj": {
+    "C:\\Sistemas Propietarios\\Backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karina\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Sistemas Propietarios\\Backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\Karina\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\Karina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karina\\backend\\obj\\",
+        "projectPath": "C:\\Sistemas Propietarios\\Backend\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
+        "outputPath": "C:\\Sistemas Propietarios\\Backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Karina\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
